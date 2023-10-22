@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c -o "$(echo $CFILE | rev | cut -d '_' -f 2 | rev).o" $CFILE
+gcc -c $CFILE > ${CFILE::-2}".s"
